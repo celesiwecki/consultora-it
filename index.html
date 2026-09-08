@@ -1,23 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Synapsis Digital Tech</title>
-    <meta
-      name="description"
-      content="No es una página web. Es una plataforma inteligente que te permite entender, controlar y hacer crecer tu negocio: ventas, gastos, ganancias, IA y automatización en un solo lugar."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapsis Digital Tech | Consultora IT</title>
+    <!-- Tipografía corporativa moderna (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-petroleo: #0b2545;
+            --azul-claro: #134074;
+            --cobre: #c59b27;
+            --fondo: #f8f9fa;
+            --texto: #212529;
+            --blanco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--fondo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* El header ahora funciona como contenedor exclusivo del logo principal */
+        header {
+            background-color: var(--azul-petroleo);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-bottom: 4px solid var(--cobre);
+        }
+
+        /* Hacemos que la imagen sea la protagonista absoluta del encabezado */
+        .logo-header {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section {
+            background: var(--blanco);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--azul-petroleo);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--cobre);
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .servicio-card {
+            background: #fdfdfd;
+            border: 1px solid #e9ecef;
+            border-top: 4px solid var(--azul-claro);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+
+        .servicio-card h3 {
+            color: var(--azul-petroleo);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--azul-petroleo);
+            color: var(--blanco);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Todo el bloque superior es ahora exclusivamente el logo -->
+        <img src="logo.png" alt="Synapsis Digital Tech Logo" class="logo-header">
+    </header>
+
+    <div class="container">
+        
+        <!-- Misión -->
+        <section>
+            <h2>Nuestra Misión</h2>
+            <p>Conectar la estrategia corporativa con la tecnología de punta mediante el desarrollo de software a medida y servicios de consultoría integral, generando ventajas competitivas sostenibles para nuestros clientes.</p>
+        </section>
+
+        <!-- Visión -->
+        <section>
+            <h2>Nuestra Visión</h2>
+            <p>Ser reconocidos internacionalmente como una consultora IT de excelencia, líder en la integración de ecosistemas digitales complejos y en la creación de experiencias tecnológicas transformadoras.</p>
+        </section>
+
+        <!-- Servicios -->
+        <section>
+            <h2>Catálogo de Servicios Sofisticados</h2>
+            <div class="servicios-grid">
+                
+                <div class="servicio-card">
+                    <h3>Desarrollo de Soluciones Digitales a Medida</h3>
+                    <p>Construcción de software corporativo de misión crítica bajo estándares internacionales de calidad.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Modernización de Infraestructura & Cloud Computing</h3>
+                    <p>Migración y optimización de entornos locales hacia arquitecturas en la nube altamente seguras.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Consultoría Estratégica en Transformación Digital</h3>
+                    <p>Asesoramiento de nivel ejecutivo para alinear la hoja de ruta tecnológica con los objetivos de crecimiento de la empresa.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Desarrollo de Aplicaciones Móviles y Web</h3>
+                    <p>Creación de productos digitales interactivos con experiencias de usuario optimizadas.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Gestión del Ciclo de Vida del Software (ALM)</h3>
+                    <p>Supervisión experta de todas las fases del desarrollo para garantizar eficiencia, plazos y ROI.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Synapsis Digital Tech. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
 </html>
