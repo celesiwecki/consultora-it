@@ -9,6 +9,8 @@
 - Animaciones de aparición al hacer scroll: se reemplazó el `IntersectionObserver` manual por **framer-motion** (`whileInView`, respeta `prefers-reduced-motion`).
 - Gráfico del dashboard demo: se reemplazaron las barras en CSS por **recharts**.
 - Logo optimizado: de ~1,1 MB a ~20 KB (256 px).
+- Logo del header: recortado el margen en blanco (`logo-mark.png`) y mostrado a su relación de aspecto real para que el lockup "SYNAPSIS DIGITAL TECH" se lea; se quitó la palabra "Synapsis" repetida al lado. Mismo recorte como favicon.
+- Deploy: build de Vite publicado en **GitHub Pages** vía GitHub Actions (`base: '/consultora-it/'`).
 
 ### Added
 - Estructura de componentes en `src/components/` (`Nav`, `Hero`, `Dashboard`, `AsistenteIA`, `Sections`, `WhatsappFab`).
