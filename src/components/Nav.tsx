@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo-mark.png'
 import { navLinks } from '../lib/data'
 import { Btn } from '../lib/ui'
 
@@ -27,13 +27,16 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-[1160px] items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-3 text-[1.15rem] font-extrabold">
+        <a
+          href="#top"
+          aria-label="Synapsis Digital Tech — inicio"
+          className="flex items-center transition hover:opacity-90"
+        >
           <img
             src={logo}
             alt="Synapsis Digital Tech"
-            className="h-12 w-12 rounded-xl bg-white/95 p-1 shadow-md ring-1 ring-cobre/30 sm:h-14 sm:w-14"
+            className="h-12 w-auto rounded-lg bg-white p-1.5 shadow-md ring-1 ring-cobre/30 sm:h-14"
           />
-          Synapsis
         </a>
 
         <button
